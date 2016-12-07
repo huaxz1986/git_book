@@ -1,0 +1,721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chapters.KNN_Dimension_Reduction package &mdash; book 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="book 1.0 documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chapters-knn-dimension-reduction-package">
+<h1>chapters.KNN_Dimension_Reduction package<a class="headerlink" href="#chapters-knn-dimension-reduction-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction.isomap">
+<span id="chapters-knn-dimension-reduction-isomap-module"></span><h2>chapters.KNN_Dimension_Reduction.isomap module<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction.isomap" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="knn">
+<h3>kNN和降维<a class="headerlink" href="#knn" title="Permalink to this headline">¶</a></h3>
+<p>Isomap</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.isomap.load_data">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.isomap.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.isomap.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于降维的数据</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，依次为训练样本集和样本集的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.isomap.plot_Isomap_k">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.isomap.</code><code class="descname">plot_Isomap_k</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.isomap.plot_Isomap_k" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 Isomap 中 n_neighbors 参数的影响，其中降维至 2维</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.isomap.plot_Isomap_k_d1">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.isomap.</code><code class="descname">plot_Isomap_k_d1</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.isomap.plot_Isomap_k_d1" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 Isomap 中 n_neighbors 参数的影响，其中降维至 1维</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.isomap.test_Isomap">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.isomap.</code><code class="descname">test_Isomap</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.isomap.test_Isomap" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 Isomap 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction.kneighbors_classifier">
+<span id="chapters-knn-dimension-reduction-kneighbors-classifier-module"></span><h2>chapters.KNN_Dimension_Reduction.kneighbors_classifier module<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction.kneighbors_classifier" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>kNN和降维<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>KNN分类和回归模型</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_classifier.load_classification_data">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_classifier.</code><code class="descname">load_classification_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_classifier.load_classification_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载分类模型使用的数据集。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_classifier.test_KNeighborsClassifier">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_classifier.</code><code class="descname">test_KNeighborsClassifier</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_classifier.test_KNeighborsClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 KNeighborsClassifier 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_classifier.test_KNeighborsClassifier_k_p">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_classifier.</code><code class="descname">test_KNeighborsClassifier_k_p</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_classifier.test_KNeighborsClassifier_k_p" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 KNeighborsClassifier 中 n_neighbors 和 p 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_classifier.test_KNeighborsClassifier_k_w">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_classifier.</code><code class="descname">test_KNeighborsClassifier_k_w</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_classifier.test_KNeighborsClassifier_k_w" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 KNeighborsClassifier 中 n_neighbors 和 weights 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction.kneighbors_regressor">
+<span id="chapters-knn-dimension-reduction-kneighbors-regressor-module"></span><h2>chapters.KNN_Dimension_Reduction.kneighbors_regressor module<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction.kneighbors_regressor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>kNN和降维<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>KNeighborsRegressor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_regressor.create_regression_data">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_regressor.</code><code class="descname">create_regression_data</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_regressor.create_regression_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>创建回归模型使用的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> &#8211; 数据集大小</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">一个元组，依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_regressor.test_KNeighborsRegressor">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_regressor.</code><code class="descname">test_KNeighborsRegressor</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_regressor.test_KNeighborsRegressor" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 KNeighborsRegressor 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_regressor.test_KNeighborsRegressor_k_p">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_regressor.</code><code class="descname">test_KNeighborsRegressor_k_p</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_regressor.test_KNeighborsRegressor_k_p" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 KNeighborsRegressor 中 n_neighbors 和 p 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kneighbors_regressor.test_KNeighborsRegressor_k_w">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kneighbors_regressor.</code><code class="descname">test_KNeighborsRegressor_k_w</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kneighbors_regressor.test_KNeighborsRegressor_k_w" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 KNeighborsRegressor 中 n_neighbors 和 weights 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction.kpca">
+<span id="chapters-knn-dimension-reduction-kpca-module"></span><h2>chapters.KNN_Dimension_Reduction.kpca module<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction.kpca" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>kNN和降维<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>KernelPCA</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kpca.load_data">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kpca.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kpca.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于降维的数据</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，依次为训练样本集和样本集的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kpca.plot_KPCA">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kpca.</code><code class="descname">plot_KPCA</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kpca.plot_KPCA" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制经过 KernelPCA 降维到二维之后的样本点</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kpca.plot_KPCA_poly">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kpca.</code><code class="descname">plot_KPCA_poly</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kpca.plot_KPCA_poly" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制经过 使用 poly 核的KernelPCA 降维到二维之后的样本点</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kpca.plot_KPCA_rbf">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kpca.</code><code class="descname">plot_KPCA_rbf</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kpca.plot_KPCA_rbf" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制经过 使用 rbf 核的KernelPCA 降维到二维之后的样本点</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kpca.plot_KPCA_sigmoid">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kpca.</code><code class="descname">plot_KPCA_sigmoid</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kpca.plot_KPCA_sigmoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制经过 使用 sigmoid 核的KernelPCA 降维到二维之后的样本点</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.kpca.test_KPCA">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.kpca.</code><code class="descname">test_KPCA</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.kpca.test_KPCA" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 KernelPCA 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction.lle">
+<span id="chapters-knn-dimension-reduction-lle-module"></span><h2>chapters.KNN_Dimension_Reduction.lle module<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction.lle" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>kNN和降维<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>LocallyLinearEmbedding</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.lle.load_data">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.lle.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.lle.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于降维的数据</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，依次为训练样本集和样本集的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.lle.plot_LocallyLinearEmbedding_k">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.lle.</code><code class="descname">plot_LocallyLinearEmbedding_k</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.lle.plot_LocallyLinearEmbedding_k" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LocallyLinearEmbedding 中 n_neighbors 参数的影响，其中降维至 2维</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.lle.plot_LocallyLinearEmbedding_k_d1">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.lle.</code><code class="descname">plot_LocallyLinearEmbedding_k_d1</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.lle.plot_LocallyLinearEmbedding_k_d1" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LocallyLinearEmbedding 中 n_neighbors 参数的影响，其中降维至 1维</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.lle.test_LocallyLinearEmbedding">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.lle.</code><code class="descname">test_LocallyLinearEmbedding</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.lle.test_LocallyLinearEmbedding" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LocallyLinearEmbedding 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction.mds">
+<span id="chapters-knn-dimension-reduction-mds-module"></span><h2>chapters.KNN_Dimension_Reduction.mds module<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction.mds" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>kNN和降维<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>MDS</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.mds.load_data">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.mds.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.mds.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于降维的数据</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，依次为训练样本集和样本集的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.mds.plot_MDS">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.mds.</code><code class="descname">plot_MDS</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.mds.plot_MDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制经过 使用 MDS 降维到二维之后的样本点</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.mds.test_MDS">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.mds.</code><code class="descname">test_MDS</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.mds.test_MDS" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 MDS 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction.pca">
+<span id="chapters-knn-dimension-reduction-pca-module"></span><h2>chapters.KNN_Dimension_Reduction.pca module<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction.pca" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>kNN和降维<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>PCA</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.pca.load_data">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.pca.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.pca.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于降维的数据</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，依次为训练样本集和样本集的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.pca.plot_PCA">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.pca.</code><code class="descname">plot_PCA</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.pca.plot_PCA" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制经过 PCA 降维到二维之后的样本点</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.KNN_Dimension_Reduction.pca.test_PCA">
+<code class="descclassname">chapters.KNN_Dimension_Reduction.pca.</code><code class="descname">test_PCA</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.KNN_Dimension_Reduction.pca.test_PCA" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 PCA 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、训练样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.KNN_Dimension_Reduction">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chapters.KNN_Dimension_Reduction" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chapters.KNN_Dimension_Reduction package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction.isomap">chapters.KNN_Dimension_Reduction.isomap module</a><ul>
+<li><a class="reference internal" href="#knn">kNN和降维</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction.kneighbors_classifier">chapters.KNN_Dimension_Reduction.kneighbors_classifier module</a><ul>
+<li><a class="reference internal" href="#id1">kNN和降维</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction.kneighbors_regressor">chapters.KNN_Dimension_Reduction.kneighbors_regressor module</a><ul>
+<li><a class="reference internal" href="#id2">kNN和降维</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction.kpca">chapters.KNN_Dimension_Reduction.kpca module</a><ul>
+<li><a class="reference internal" href="#id3">kNN和降维</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction.lle">chapters.KNN_Dimension_Reduction.lle module</a><ul>
+<li><a class="reference internal" href="#id4">kNN和降维</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction.mds">chapters.KNN_Dimension_Reduction.mds module</a><ul>
+<li><a class="reference internal" href="#id5">kNN和降维</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction.pca">chapters.KNN_Dimension_Reduction.pca module</a><ul>
+<li><a class="reference internal" href="#id6">kNN和降维</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.KNN_Dimension_Reduction">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chapters.KNN_Dimension_Reduction.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, huaxz1986.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chapters.Bayesian package &mdash; book 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="book 1.0 documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chapters-bayesian-package">
+<h1>chapters.Bayesian package<a class="headerlink" href="#chapters-bayesian-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chapters.Bayesian.bayesian">
+<span id="chapters-bayesian-bayesian-module"></span><h2>chapters.Bayesian.bayesian module<a class="headerlink" href="#module-chapters.Bayesian.bayesian" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>贝叶斯分类器和贝叶斯网络<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>贝叶斯分类器</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Bayesian.bayesian.load_data">
+<code class="descclassname">chapters.Bayesian.bayesian.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.bayesian.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于分类问题的数据集。这里使用 scikit-learn 自带的 digits 数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于分类问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的标记、测试样本集对应的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Bayesian.bayesian.show_digits">
+<code class="descclassname">chapters.Bayesian.bayesian.</code><code class="descname">show_digits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.bayesian.show_digits" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制 digits 数据集。这里只是绘制数据集中前 25 个样本的图片。</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Bayesian.bernoulliNB">
+<span id="chapters-bayesian-bernoullinb-module"></span><h2>chapters.Bayesian.bernoulliNB module<a class="headerlink" href="#module-chapters.Bayesian.bernoulliNB" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>贝叶斯分类器和贝叶斯网络<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>BernoulliNB</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Bayesian.bernoulliNB.test_BernoulliNB">
+<code class="descclassname">chapters.Bayesian.bernoulliNB.</code><code class="descname">test_BernoulliNB</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.bernoulliNB.test_BernoulliNB" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 BernoulliNB 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Bayesian.bernoulliNB.test_BernoulliNB_alpha">
+<code class="descclassname">chapters.Bayesian.bernoulliNB.</code><code class="descname">test_BernoulliNB_alpha</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.bernoulliNB.test_BernoulliNB_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 BernoulliNB 的预测性能随 alpha 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Bayesian.bernoulliNB.test_BernoulliNB_binarize">
+<code class="descclassname">chapters.Bayesian.bernoulliNB.</code><code class="descname">test_BernoulliNB_binarize</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.bernoulliNB.test_BernoulliNB_binarize" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 BernoulliNB 的预测性能随 binarize 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Bayesian.gaussianNB">
+<span id="chapters-bayesian-gaussiannb-module"></span><h2>chapters.Bayesian.gaussianNB module<a class="headerlink" href="#module-chapters.Bayesian.gaussianNB" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>贝叶斯分类器和贝叶斯网络<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>GaussianNB</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Bayesian.gaussianNB.test_GaussianNB">
+<code class="descclassname">chapters.Bayesian.gaussianNB.</code><code class="descname">test_GaussianNB</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.gaussianNB.test_GaussianNB" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 GaussianNB 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Bayesian.multinomialNB">
+<span id="chapters-bayesian-multinomialnb-module"></span><h2>chapters.Bayesian.multinomialNB module<a class="headerlink" href="#module-chapters.Bayesian.multinomialNB" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>贝叶斯分类器和贝叶斯网络<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>MultinomialNB</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Bayesian.multinomialNB.test_MultinomialNB">
+<code class="descclassname">chapters.Bayesian.multinomialNB.</code><code class="descname">test_MultinomialNB</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.multinomialNB.test_MultinomialNB" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 MultinomialNB 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Bayesian.multinomialNB.test_MultinomialNB_alpha">
+<code class="descclassname">chapters.Bayesian.multinomialNB.</code><code class="descname">test_MultinomialNB_alpha</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Bayesian.multinomialNB.test_MultinomialNB_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 MultinomialNB 的预测性能随 alpha 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Bayesian">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chapters.Bayesian" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chapters.Bayesian package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-chapters.Bayesian.bayesian">chapters.Bayesian.bayesian module</a><ul>
+<li><a class="reference internal" href="#id1">贝叶斯分类器和贝叶斯网络</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Bayesian.bernoulliNB">chapters.Bayesian.bernoulliNB module</a><ul>
+<li><a class="reference internal" href="#id2">贝叶斯分类器和贝叶斯网络</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Bayesian.gaussianNB">chapters.Bayesian.gaussianNB module</a><ul>
+<li><a class="reference internal" href="#id3">贝叶斯分类器和贝叶斯网络</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Bayesian.multinomialNB">chapters.Bayesian.multinomialNB module</a><ul>
+<li><a class="reference internal" href="#id4">贝叶斯分类器和贝叶斯网络</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Bayesian">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chapters.Bayesian.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, huaxz1986.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

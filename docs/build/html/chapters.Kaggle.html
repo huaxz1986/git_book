@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chapters.Kaggle package &mdash; book 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="book 1.0 documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chapters-kaggle-package">
+<h1>chapters.Kaggle package<a class="headerlink" href="#chapters-kaggle-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chapters.Kaggle.data_clean">
+<span id="chapters-kaggle-data-clean-module"></span><h2>chapters.Kaggle.data_clean module<a class="headerlink" href="#module-chapters.Kaggle.data_clean" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="chapters.Kaggle.data_clean.Data_Cleaner">
+<em class="property">class </em><code class="descclassname">chapters.Kaggle.data_clean.</code><code class="descname">Data_Cleaner</code><span class="sig-paren">(</span><em>people_file_name</em>, <em>act_train_file_name</em>, <em>act_test_file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Kaggle.data_clean.Data_Cleaner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>数据清洗器</p>
+<p>它的初始化需要提供三个文件的文件名。它提供了唯一的对外接口：load_data()。它返回清洗好的数据。
+如果数据已存在，则直接返回。否则将执行一系列清洗操作并返回清洗好的数据。</p>
+<dl class="method">
+<dt id="chapters.Kaggle.data_clean.Data_Cleaner.load_data">
+<code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Kaggle.data_clean.Data_Cleaner.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载清洗好的数据</p>
+<blockquote>
+<div>如果数据已经存在，则直接返回。如果不存在，则加载 csv文件，然后合并数据、拆分成 type1 ~type7，然后执行数据类型转换，</div></blockquote>
+<p>最后重新排列每个列的顺序。然后保存数据并返回数据。</p>
+<p>:return:一个元组：依次为：self.train_datas,self.test_datas</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Kaggle.data_clean.current_time">
+<code class="descclassname">chapters.Kaggle.data_clean.</code><code class="descname">current_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Kaggle.data_clean.current_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>以固定格式打印当前时间</p>
+<p>:return:返回当前时间的字符串</p>
+</dd></dl>
+
+</div>
+<div class="section" id="chapters-kaggle-data-preprocess-module">
+<h2>chapters.Kaggle.data_preprocess module<a class="headerlink" href="#chapters-kaggle-data-preprocess-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="chapters-kaggle-grid-search-module">
+<h2>chapters.Kaggle.grid_search module<a class="headerlink" href="#chapters-kaggle-grid-search-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="chapters-kaggle-learning-validation-curve-module">
+<h2>chapters.Kaggle.learning_validation_curve module<a class="headerlink" href="#chapters-kaggle-learning-validation-curve-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chapters.Kaggle">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chapters.Kaggle" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chapters.Kaggle package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-chapters.Kaggle.data_clean">chapters.Kaggle.data_clean module</a></li>
+<li><a class="reference internal" href="#chapters-kaggle-data-preprocess-module">chapters.Kaggle.data_preprocess module</a></li>
+<li><a class="reference internal" href="#chapters-kaggle-grid-search-module">chapters.Kaggle.grid_search module</a></li>
+<li><a class="reference internal" href="#chapters-kaggle-learning-validation-curve-module">chapters.Kaggle.learning_validation_curve module</a></li>
+<li><a class="reference internal" href="#module-chapters.Kaggle">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chapters.Kaggle.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, huaxz1986.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

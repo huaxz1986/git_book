@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chapters.Decision_Tree package &mdash; book 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="book 1.0 documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chapters-decision-tree-package">
+<h1>chapters.Decision_Tree package<a class="headerlink" href="#chapters-decision-tree-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chapters.Decision_Tree.decisiontree_classifier">
+<span id="chapters-decision-tree-decisiontree-classifier-module"></span><h2>chapters.Decision_Tree.decisiontree_classifier module<a class="headerlink" href="#module-chapters.Decision_Tree.decisiontree_classifier" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>决策树<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>DecisionTreeClassifier</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_classifier.load_data">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_classifier.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_classifier.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于分类问题的数据集。数据集采用 scikit-learn 自带的 iris 数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于分类问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的标记、测试样本集对应的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_classifier.</code><code class="descname">test_DecisionTreeClassifier</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 DecisionTreeClassifier 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier_criterion">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_classifier.</code><code class="descname">test_DecisionTreeClassifier_criterion</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier_criterion" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 DecisionTreeClassifier 的预测性能随 criterion 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier_depth">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_classifier.</code><code class="descname">test_DecisionTreeClassifier_depth</code><span class="sig-paren">(</span><em>*data</em>, <em>*</em>, <em>maxdepth</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 DecisionTreeClassifier 的预测性能随 max_depth 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</li>
+<li><strong>maxdepth</strong> &#8211; 一个整数，用于 DecisionTreeClassifier 的 max_depth 参数</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier_splitter">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_classifier.</code><code class="descname">test_DecisionTreeClassifier_splitter</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_classifier.test_DecisionTreeClassifier_splitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 DecisionTreeClassifier 的预测性能随划分类型的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Decision_Tree.decisiontree_regressor">
+<span id="chapters-decision-tree-decisiontree-regressor-module"></span><h2>chapters.Decision_Tree.decisiontree_regressor module<a class="headerlink" href="#module-chapters.Decision_Tree.decisiontree_regressor" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>决策树<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>DecisionTreeRegressor</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_regressor.creat_data">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_regressor.</code><code class="descname">creat_data</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_regressor.creat_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>产生用于回归问题的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> &#8211; 数据集容量</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">返回一个元组，元素依次为：训练样本集、测试样本集、训练样本集对应的值、测试样本集对应的值</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_regressor.test_DecisionTreeRegressor">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_regressor.</code><code class="descname">test_DecisionTreeRegressor</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_regressor.test_DecisionTreeRegressor" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 DecisionTreeRegressor 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_regressor.test_DecisionTreeRegressor_depth">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_regressor.</code><code class="descname">test_DecisionTreeRegressor_depth</code><span class="sig-paren">(</span><em>*data</em>, <em>*</em>, <em>maxdepth</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_regressor.test_DecisionTreeRegressor_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 DecisionTreeRegressor 预测性能随  max_depth 的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</li>
+<li><strong>maxdepth</strong> &#8211; 一个整数，它作为 DecisionTreeRegressor 的 max_depth 参数</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Decision_Tree.decisiontree_regressor.test_DecisionTreeRegressor_splitter">
+<code class="descclassname">chapters.Decision_Tree.decisiontree_regressor.</code><code class="descname">test_DecisionTreeRegressor_splitter</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Decision_Tree.decisiontree_regressor.test_DecisionTreeRegressor_splitter" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 DecisionTreeRegressor 预测性能随划分类型的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Decision_Tree">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chapters.Decision_Tree" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chapters.Decision_Tree package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-chapters.Decision_Tree.decisiontree_classifier">chapters.Decision_Tree.decisiontree_classifier module</a><ul>
+<li><a class="reference internal" href="#id1">决策树</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Decision_Tree.decisiontree_regressor">chapters.Decision_Tree.decisiontree_regressor module</a><ul>
+<li><a class="reference internal" href="#id2">决策树</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Decision_Tree">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chapters.Decision_Tree.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, huaxz1986.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

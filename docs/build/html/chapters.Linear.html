@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chapters.Linear package &mdash; book 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="book 1.0 documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chapters-linear-package">
+<h1>chapters.Linear package<a class="headerlink" href="#chapters-linear-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chapters.Linear.elasticnet">
+<span id="chapters-linear-elasticnet-module"></span><h2>chapters.Linear.elasticnet module<a class="headerlink" href="#module-chapters.Linear.elasticnet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>广义线性模型<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>ElasticNet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Linear.elasticnet.load_data">
+<code class="descclassname">chapters.Linear.elasticnet.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.elasticnet.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于回归问题的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于回归问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的值、测试样本集对应的值</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.elasticnet.test_ElasticNet">
+<code class="descclassname">chapters.Linear.elasticnet.</code><code class="descname">test_ElasticNet</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.elasticnet.test_ElasticNet" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 ElasticNet 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.elasticnet.test_ElasticNet_alpha_rho">
+<code class="descclassname">chapters.Linear.elasticnet.</code><code class="descname">test_ElasticNet_alpha_rho</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.elasticnet.test_ElasticNet_alpha_rho" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 ElasticNet 的预测性能随 alpha 和 l1_ratio 的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Linear.lasso">
+<span id="chapters-linear-lasso-module"></span><h2>chapters.Linear.lasso module<a class="headerlink" href="#module-chapters.Linear.lasso" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>广义线性模型<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Lasso</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Linear.lasso.load_data">
+<code class="descclassname">chapters.Linear.lasso.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lasso.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于回归问题的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于回归问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的值、测试样本集对应的值</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.lasso.test_Lasso">
+<code class="descclassname">chapters.Linear.lasso.</code><code class="descname">test_Lasso</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lasso.test_Lasso" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 Lasso 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.lasso.test_Lasso_alpha">
+<code class="descclassname">chapters.Linear.lasso.</code><code class="descname">test_Lasso_alpha</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lasso.test_Lasso_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 Lasso 的预测性能随 alpha 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Linear.lda">
+<span id="chapters-linear-lda-module"></span><h2>chapters.Linear.lda module<a class="headerlink" href="#module-chapters.Linear.lda" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>广义线性模型<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>线性判别分析</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Linear.lda.load_data">
+<code class="descclassname">chapters.Linear.lda.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lda.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于分类问题的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于分类问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的标记、测试样本集对应的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.lda.plot_LDA">
+<code class="descclassname">chapters.Linear.lda.</code><code class="descname">plot_LDA</code><span class="sig-paren">(</span><em>converted_X</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lda.plot_LDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制经过 LDA 转换后的数据</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>converted_X</strong> &#8211; 经过 LDA转换后的样本集</li>
+<li><strong>y</strong> &#8211; 样本集的标记</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.lda.run_plot_LDA">
+<code class="descclassname">chapters.Linear.lda.</code><code class="descname">run_plot_LDA</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lda.run_plot_LDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>执行 plot_LDA 。其中数据集来自于 load_data() 函数</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.lda.test_LinearDiscriminantAnalysis">
+<code class="descclassname">chapters.Linear.lda.</code><code class="descname">test_LinearDiscriminantAnalysis</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lda.test_LinearDiscriminantAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LinearDiscriminantAnalysis 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.lda.test_LinearDiscriminantAnalysis_shrinkage">
+<code class="descclassname">chapters.Linear.lda.</code><code class="descname">test_LinearDiscriminantAnalysis_shrinkage</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lda.test_LinearDiscriminantAnalysis_shrinkage" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试  LinearDiscriminantAnalysis 的预测性能随 shrinkage 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.lda.test_LinearDiscriminantAnalysis_solver">
+<code class="descclassname">chapters.Linear.lda.</code><code class="descname">test_LinearDiscriminantAnalysis_solver</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.lda.test_LinearDiscriminantAnalysis_solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LinearDiscriminantAnalysis 的预测性能随 solver 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Linear.linear_regression">
+<span id="chapters-linear-linear-regression-module"></span><h2>chapters.Linear.linear_regression module<a class="headerlink" href="#module-chapters.Linear.linear_regression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>广义线性模型<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>LinearRegression</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Linear.linear_regression.load_data">
+<code class="descclassname">chapters.Linear.linear_regression.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.linear_regression.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于回归问题的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于回归问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的值、测试样本集对应的值</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.linear_regression.test_LinearRegression">
+<code class="descclassname">chapters.Linear.linear_regression.</code><code class="descname">test_LinearRegression</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.linear_regression.test_LinearRegression" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LinearRegression 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Linear.logistic_regression">
+<span id="chapters-linear-logistic-regression-module"></span><h2>chapters.Linear.logistic_regression module<a class="headerlink" href="#module-chapters.Linear.logistic_regression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>广义线性模型<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Logistic 回归（也称作对数几率回归）</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Linear.logistic_regression.load_data">
+<code class="descclassname">chapters.Linear.logistic_regression.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.logistic_regression.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于分类问题的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于分类问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的标记、测试样本集对应的标记</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.logistic_regression.test_LogisticRegression">
+<code class="descclassname">chapters.Linear.logistic_regression.</code><code class="descname">test_LogisticRegression</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.logistic_regression.test_LogisticRegression" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LogisticRegression 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.logistic_regression.test_LogisticRegression_C">
+<code class="descclassname">chapters.Linear.logistic_regression.</code><code class="descname">test_LogisticRegression_C</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.logistic_regression.test_LogisticRegression_C" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LogisticRegression 的预测性能随  C  参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.logistic_regression.test_LogisticRegression_multinomial">
+<code class="descclassname">chapters.Linear.logistic_regression.</code><code class="descname">test_LogisticRegression_multinomial</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.logistic_regression.test_LogisticRegression_multinomial" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 LogisticRegression 的预测性能随 multi_class 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的标记、测试样本的标记</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Linear.ridge">
+<span id="chapters-linear-ridge-module"></span><h2>chapters.Linear.ridge module<a class="headerlink" href="#module-chapters.Linear.ridge" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>广义线性模型<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>线性回归</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Linear.ridge.load_data">
+<code class="descclassname">chapters.Linear.ridge.</code><code class="descname">load_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.ridge.load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>加载用于回归问题的数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">一个元组，用于回归问题。元组元素依次为：训练样本集、测试样本集、训练样本集对应的值、测试样本集对应的值</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.ridge.test_Ridge">
+<code class="descclassname">chapters.Linear.ridge.</code><code class="descname">test_Ridge</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.ridge.test_Ridge" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 Ridge 的用法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Linear.ridge.test_Ridge_alpha">
+<code class="descclassname">chapters.Linear.ridge.</code><code class="descname">test_Ridge_alpha</code><span class="sig-paren">(</span><em>*data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Linear.ridge.test_Ridge_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试 Ridge 的预测性能随 alpha 参数的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> &#8211; 可变参数。它是一个元组，这里要求其元素依次为：训练样本集、测试样本集、训练样本的值、测试样本的值</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Linear">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chapters.Linear" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chapters.Linear package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-chapters.Linear.elasticnet">chapters.Linear.elasticnet module</a><ul>
+<li><a class="reference internal" href="#id1">广义线性模型</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Linear.lasso">chapters.Linear.lasso module</a><ul>
+<li><a class="reference internal" href="#id2">广义线性模型</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Linear.lda">chapters.Linear.lda module</a><ul>
+<li><a class="reference internal" href="#id3">广义线性模型</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Linear.linear_regression">chapters.Linear.linear_regression module</a><ul>
+<li><a class="reference internal" href="#id4">广义线性模型</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Linear.logistic_regression">chapters.Linear.logistic_regression module</a><ul>
+<li><a class="reference internal" href="#id5">广义线性模型</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Linear.ridge">chapters.Linear.ridge module</a><ul>
+<li><a class="reference internal" href="#id6">广义线性模型</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Linear">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chapters.Linear.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, huaxz1986.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

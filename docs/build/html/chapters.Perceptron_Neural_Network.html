@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chapters.Perceptron_Neural_Network package &mdash; book 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="book 1.0 documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="chapters-perceptron-neural-network-package">
+<h1>chapters.Perceptron_Neural_Network package<a class="headerlink" href="#chapters-perceptron-neural-network-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-chapters.Perceptron_Neural_Network.neural_network">
+<span id="chapters-perceptron-neural-network-neural-network-module"></span><h2>chapters.Perceptron_Neural_Network.neural_network module<a class="headerlink" href="#module-chapters.Perceptron_Neural_Network.neural_network" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>感知机和神经网络<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>神经网络模型。注意 MLPClassifier 是 scikit-learn version 0.18 版本才出现的。截止目前，该版本还是开发版，官方提供的稳定版为 0.17。
+所以为了运行本示例，需要手动下载编译安装 scikit-learn version 0.18 版</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network.creat_data_no_linear_2d">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network.</code><code class="descname">creat_data_no_linear_2d</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network.creat_data_no_linear_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>创建二维的线性不可分数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> &#8211; 负例的数量</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">线性不可分数据集，数据集大小为 2*n+n/10 （ n/10 是误差点的数量，误差点导致了线性不可分）</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network.plot_samples_2d">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network.</code><code class="descname">plot_samples_2d</code><span class="sig-paren">(</span><em>ax</em>, <em>samples</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network.plot_samples_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制二维数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ax</strong> &#8211; Axes 实例，用于绘制图形</li>
+<li><strong>samples</strong> &#8211; 二维数据集</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network.predict_with_MLPClassifier">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network.</code><code class="descname">predict_with_MLPClassifier</code><span class="sig-paren">(</span><em>ax</em>, <em>train_data</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network.predict_with_MLPClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>使用 MLPClassifier绘制预测结果</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ax</strong> &#8211; Axes 实例，用于绘制图形</li>
+<li><strong>train_data</strong> &#8211; 训练数据集</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network.run_plot_samples_2d">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network.</code><code class="descname">run_plot_samples_2d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network.run_plot_samples_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制二维线性不可分数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network.run_predict_with_MLPClassifier">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network.</code><code class="descname">run_predict_with_MLPClassifier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network.run_predict_with_MLPClassifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>用 MLPClassifier 预测线性不可分数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Perceptron_Neural_Network.neural_network_iris">
+<span id="chapters-perceptron-neural-network-neural-network-iris-module"></span><h2>chapters.Perceptron_Neural_Network.neural_network_iris module<a class="headerlink" href="#module-chapters.Perceptron_Neural_Network.neural_network_iris" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>感知机和神经网络<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>神经网络模型：用于 iris 模型。注意 MLPClassifier 是 scikit-learn version 0.18 版本才出现的。截止目前，该版本还是开发版，官方提供的稳定版为 0.17。
+所以为了运行本示例，需要手动下载编译安装 scikit-learn version 0.18 版</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network_iris.</code><code class="descname">mlpclassifier_iris</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris" title="Permalink to this definition">¶</a></dt>
+<dd><p>使用 MLPClassifier 预测调整后的 iris 数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_algorithms">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network_iris.</code><code class="descname">mlpclassifier_iris_algorithms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_algorithms" title="Permalink to this definition">¶</a></dt>
+<dd><p>使用 MLPClassifier 预测调整后的 iris 数据集。考察不同的 algorithm 的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_ativations">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network_iris.</code><code class="descname">mlpclassifier_iris_ativations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_ativations" title="Permalink to this definition">¶</a></dt>
+<dd><p>使用 MLPClassifier 预测调整后的 iris 数据集。考察不同的 activation 的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_eta">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network_iris.</code><code class="descname">mlpclassifier_iris_eta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_eta" title="Permalink to this definition">¶</a></dt>
+<dd><p>使用 MLPClassifier 预测调整后的 iris 数据集。考察不同的学习率的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_hidden_layer_sizes">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network_iris.</code><code class="descname">mlpclassifier_iris_hidden_layer_sizes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network_iris.mlpclassifier_iris_hidden_layer_sizes" title="Permalink to this definition">¶</a></dt>
+<dd><p>使用 MLPClassifier 预测调整后的 iris 数据集。考察不同的 hidden_layer_sizes 的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network_iris.plot_classifier_predict_meshgrid">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network_iris.</code><code class="descname">plot_classifier_predict_meshgrid</code><span class="sig-paren">(</span><em>ax</em>, <em>clf</em>, <em>x_min</em>, <em>x_max</em>, <em>y_min</em>, <em>y_max</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network_iris.plot_classifier_predict_meshgrid" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>绘制 MLPClassifier 的分类结果</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ax</strong> &#8211; Axes 实例，用于绘图</li>
+<li><strong>clf</strong> &#8211; MLPClassifier 实例</li>
+<li><strong>x_min</strong> &#8211; 第一维特征的最小值</li>
+<li><strong>x_max</strong> &#8211; 第一维特征的最大值</li>
+<li><strong>y_min</strong> &#8211; 第二维特征的最小值</li>
+<li><strong>y_max</strong> &#8211; 第二维特征的最大值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.neural_network_iris.plot_samples">
+<code class="descclassname">chapters.Perceptron_Neural_Network.neural_network_iris.</code><code class="descname">plot_samples</code><span class="sig-paren">(</span><em>ax</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.neural_network_iris.plot_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制二维数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ax</strong> &#8211; Axes 实例，用于绘图</li>
+<li><strong>x</strong> &#8211; 第一维特征</li>
+<li><strong>y</strong> &#8211; 第二维特征</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Perceptron_Neural_Network.perceptron">
+<span id="chapters-perceptron-neural-network-perceptron-module"></span><h2>chapters.Perceptron_Neural_Network.perceptron module<a class="headerlink" href="#module-chapters.Perceptron_Neural_Network.perceptron" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>感知机和神经网络<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>感知机模型</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">copyright:</th><td class="field-body"><ol class="first loweralpha simple" start="3">
+<li>2016 by the huaxz1986.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">license:</th><td class="field-body"><p class="first last">lgpl-3.0, see LICENSE for more details.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.creat_data">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">creat_data</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.creat_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>创建线性可分数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> &#8211; 正例样本的个数（同时也是负例样本的个数）</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">返回一个线性可分数据集，数据集大小为 2*n</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.creat_data_no_linear">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">creat_data_no_linear</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.creat_data_no_linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>创建线性不可分数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> &#8211; 正例样本的个数（同时也是负例样本的个数）</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">返回一个线性不可分数据集，数据集大小为 2*n</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.creat_hyperplane">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">creat_hyperplane</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>w</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.creat_hyperplane" title="Permalink to this definition">¶</a></dt>
+<dd><p>创建分离超平面</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>x</strong> &#8211; 分离超平面上的点的x坐标组成的数组</li>
+<li><strong>y</strong> &#8211; 分离超平面上的点的y坐标组成的数组</li>
+<li><strong>w</strong> &#8211; 超平面的法向量，它是一个列向量</li>
+<li><strong>b</strong> &#8211; 超平面的截距</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">分离超平面上的点的z坐标组成的数组</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.creat_w">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">creat_w</code><span class="sig-paren">(</span><em>train_data</em>, <em>alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.creat_w" title="Permalink to this definition">¶</a></dt>
+<dd><p>根据训练数据集和 alpha向量 创建 权重向量</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>train_data</strong> &#8211; 训练数据集</li>
+<li><strong>alpha</strong> &#8211; alpha 向量</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">权重向量</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.perceptron">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">perceptron</code><span class="sig-paren">(</span><em>train_data</em>, <em>eta</em>, <em>w_0</em>, <em>b_0</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.perceptron" title="Permalink to this definition">¶</a></dt>
+<dd><p>感知机的原始算法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>train_data</strong> &#8211; 训练数据集</li>
+<li><strong>eta</strong> &#8211; 学习率</li>
+<li><strong>w_0</strong> &#8211; 初始权重向量</li>
+<li><strong>b_0</strong> &#8211; 初始的 b</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">一个元组，依次为：最终的权重向量，最终的 b 值，迭代次数</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.perceptron_dual">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">perceptron_dual</code><span class="sig-paren">(</span><em>train_data</em>, <em>eta</em>, <em>alpha_0</em>, <em>b_0</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.perceptron_dual" title="Permalink to this definition">¶</a></dt>
+<dd><p>感知机的对偶形式算法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>train_data</strong> &#8211; 训练数据集</li>
+<li><strong>eta</strong> &#8211; 学习率</li>
+<li><strong>alpha_0</strong> &#8211; 初始的 alpha 向量</li>
+<li><strong>b_0</strong> &#8211; 初始的 b 值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">一个元组，依次为：最终的alpha 向量、最终的 b 值、迭代次数</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.plot_samples">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">plot_samples</code><span class="sig-paren">(</span><em>ax</em>, <em>samples</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.plot_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制样本点</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ax</strong> &#8211; 绘制图形所在的 Axes</li>
+<li><strong>samples</strong> &#8211; 样本数据集</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.run_perceptron">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">run_perceptron</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.run_perceptron" title="Permalink to this definition">¶</a></dt>
+<dd><p>对线性可分数据集执行感知机的原始算法并绘制分离超平面</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.run_perceptron_dual">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">run_perceptron_dual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.run_perceptron_dual" title="Permalink to this definition">¶</a></dt>
+<dd><p>对线性可分数据集执行感知机的原始算法和对偶形式算法，并绘制分离超平面</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.run_perceptron_no_linear">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">run_perceptron_no_linear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.run_perceptron_no_linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>对线性不可分数据集执行感知机的元素算法</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.run_plot_samples">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">run_plot_samples</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.run_plot_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制线性可分数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.run_plot_samples_no_linear">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">run_plot_samples_no_linear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.run_plot_samples_no_linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>绘制线性不可分数据集</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.run_test_eta">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">run_test_eta</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.run_test_eta" title="Permalink to this definition">¶</a></dt>
+<dd><p>执行 test_eta</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="chapters.Perceptron_Neural_Network.perceptron.test_eta">
+<code class="descclassname">chapters.Perceptron_Neural_Network.perceptron.</code><code class="descname">test_eta</code><span class="sig-paren">(</span><em>data</em>, <em>ax</em>, <em>etas</em>, <em>w_0</em>, <em>alpha_0</em>, <em>b_0</em><span class="sig-paren">)</span><a class="headerlink" href="#chapters.Perceptron_Neural_Network.perceptron.test_eta" title="Permalink to this definition">¶</a></dt>
+<dd><p>测试学习率对于感知机两种形式算法的收敛速度的影响</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> &#8211; 训练数据集</li>
+<li><strong>ax</strong> &#8211; Axes实例，负责绘制图形</li>
+<li><strong>etas</strong> &#8211; 候选的学习率的值组成的列表</li>
+<li><strong>w_0</strong> &#8211; 原始算法用到的初始权重向量</li>
+<li><strong>alpha_0</strong> &#8211; 对偶形式用到的初始 alpha 向量</li>
+<li><strong>b_0</strong> &#8211; 初始 b 值</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="module-chapters.Perceptron_Neural_Network">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-chapters.Perceptron_Neural_Network" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chapters.Perceptron_Neural_Network package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-chapters.Perceptron_Neural_Network.neural_network">chapters.Perceptron_Neural_Network.neural_network module</a><ul>
+<li><a class="reference internal" href="#id1">感知机和神经网络</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Perceptron_Neural_Network.neural_network_iris">chapters.Perceptron_Neural_Network.neural_network_iris module</a><ul>
+<li><a class="reference internal" href="#id2">感知机和神经网络</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Perceptron_Neural_Network.perceptron">chapters.Perceptron_Neural_Network.perceptron module</a><ul>
+<li><a class="reference internal" href="#id3">感知机和神经网络</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-chapters.Perceptron_Neural_Network">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/chapters.Perceptron_Neural_Network.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">book 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, huaxz1986.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>
