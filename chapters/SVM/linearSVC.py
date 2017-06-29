@@ -48,7 +48,7 @@ def test_LinearSVC_loss(*data):
     for loss in losses:
         cls=svm.LinearSVC(loss=loss)
         cls.fit(X_train,y_train)
-        print("Loss:%f"%loss)
+        print("Loss:%s"%loss)
         print('Coefficients:%s, intercept %s'%(cls.coef_,cls.intercept_))
         print('Score: %.2f' % cls.score(X_test, y_test))
 def test_LinearSVC_L12(*data):
