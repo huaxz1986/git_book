@@ -115,8 +115,8 @@ def test_LeaveOneOut():
     )
     y=np.array([1,1,0,0])
 
-    lo=LeaveOneOut(len(y))
-    for train_index,test_index in lo:
+    lo=LeaveOneOut()
+    for train_index,test_index in lo.split(X):
           print("Train Index:",train_index)
           print("Test Index:",test_index)
           print("X_train:",X[train_index])
