@@ -52,4 +52,5 @@ def test_MultinomialNB_alpha(*data):
     ax.set_ylim(0,1.0)
     ax.set_title("MultinomialNB")
     ax.set_xscale("log")
+    ax.legend(loc='best')
     plt.show()
